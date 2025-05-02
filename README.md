@@ -14,17 +14,16 @@ es un sistema que registra todos los cambios en el codigo fuente de un proyecto
 *  **rendimiento⚡** guarda lo que es importante
 *  **seguridad🔒** conserva lo que le pidas
 *  **flexibilidad🔁** no es nesesario un desarrollo
-*  ![image](https://github.com/user-attachments/assets/3ad0239d-def8-4ee1-8472-fadc65e961f7)
-
+    ![image](https://github.com/user-attachments/assets/3ad0239d-def8-4ee1-8472-fadc65e961f7)>
   
 ## ¿Que es git?  
 
+<img src="https://github.com/user-attachments/assets/e6a6ec1f-b1c9-47f7-bae5-ac4f63ac34b0" align="right"
+alt="Git Logo" width="110" height="110">
+
 Un sistema de control de versiones distribuido, aloja una copia completa del repositorio ennuestra maquina local para que posteriormente podamos subirlo a un repositorio remoto y podamos hacer trabajo colaborativo
-
-![image](https://github.com/user-attachments/assets/e6a6ec1f-b1c9-47f7-bae5-ac4f63ac34b0)
-
   
-##¿Qué es un repositorio?
+¿Qué es un repositorio?
 
 Es una especie de almacen para guardar los archivos, se podria ver como un estante para libros
 ![image](https://github.com/user-attachments/assets/38b71276-a672-4a82-a2d8-4c56796a2354)
@@ -44,29 +43,40 @@ Estado      |Descripción|
 |Staged|Ha sido confirmado en el repositorio local|
 |Commited|El archivo esta grabado en el repositorio local|
 
- ## comandos y para que sirven
+## Comandos y para qué sirven
+<details><summary>Iniciando un proyecto en Git </summary>
 
-| Comando                   | Utilidad                                                                 |
-|---------------------------|---------------------------------|
-| git init    | Inicia un nuevo repositorio en la carpeta actual|
-| git status | Muestra el estado de los archivos|
-| git add *archivo | Prepara un archivo para ser confirmado|
-| git commit -m "mensaje" | Guarda los cambios preparados con un mensaje descriptivo|            
-| git log         | Muestra el historial de commits|   
-| git branch      | Lista todas las ramas en el repositorio|
-| git switch *rama   | Cambia a otra rama existente. |
-| git push  | Sube los cambios al repositorio remoto |
-| git pull   | Descarga y combina los cambios del repositorio remoto|   
+### Comandos básicos de Git
+| Comando | Utilidad |
+|--------|----------|
+| `git init` | Inicia un nuevo repositorio en la carpeta actual |
+| `git status` | Muestra el estado de los archivos |
+| `git add *archivo` | Prepara un archivo para ser confirmado |
+| `git commit -m "mensaje"` | Guarda los cambios preparados con un mensaje descriptivo |
+| `git log` | Muestra el historial de commits |
+| `git branch` | Lista todas las ramas en el repositorio |
+| `git switch *rama` | Cambia a otra rama existente |
+| `git push` | Sube los cambios al repositorio remoto |
+| `git pull` | Descarga y combina los cambios del repositorio remoto |
+
+</details>
+
+
 
 ## ¿Qué es Commit?
 Es tipo  punto de guardado, como sacar imagenes cada 2 minutos y ver que cambio tuviste pasando dos minutos o para mejor explicacion en un videojuego se puede guardar una o mas partidas para continuar desde ese punto el juego  un claro ejemplo seria vice city
 
+![image](https://github.com/user-attachments/assets/c45b1301-9d73-4ce8-9b5a-d2a954958a78)
+
+ 
 ## ¿Qué es HEAD?
 Es como un tipo de ubicacion para saber donde te ubicas   
 Este marca el commit en el que te encuentras actualmente y puedes verlo con un git log
 
 # ¿Qué es una rama?
 Es una versión separada del repositorio principalal ser una linea de desarollo independientemente cualquier cambio que se haga en la rama se mantendra separado de las demas
+
+![a5](https://github.com/user-attachments/assets/207b5104-c66d-499a-9d93-592c16566eb3)
 
 
 
@@ -75,6 +85,9 @@ Es una versión separada del repositorio principalal ser una linea de desarollo 
 # clase 3
 ## Fusionar ramas
 Cuando hablamos de fusión nos referimos a que los cambios que hemos realizado en la rama se integra otra rama
+
+![image](https://github.com/user-attachments/assets/d2c96de5-0adf-4e80-8ca2-f4dd279c8c94)
+
 
 
 * **git brach --delete<nombredelarama>**
