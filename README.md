@@ -395,8 +395,10 @@ Cuando ya has compartido el commit con otras personas (por ejemplo, en un reposi
 ## ¿Qué hace git checkout?
 Cambiar de rama:
 Cuando usas git checkout con el nombre de una rama, cambias a esa rama en tu repositorio local.
-                                    | **Descripción**                                                                                                         |
-|----------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
+
+## codigos
+|**codigos**                                         |  **Descripción**                                                                                    |
+|----------------------------------------------------|-----------------------------------------------------------------------------------------------------|
 | `git checkout <nombre-de-la-rama>`                 | **Función**: Cambia a la rama especificada.                                                                                 |
 | `git checkout -b <nombre-de-la-nueva-rama>`        | **Función**: Crea una nueva rama y cambia a ella.                                                                          |
 | `git checkout -- <archivo>`                        | **Función**: Restaura un archivo a su estado en el último commit, deshaciendo cambios no comprometidos.                   |
