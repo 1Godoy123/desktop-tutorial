@@ -253,4 +253,154 @@ Un Pull Request (PR) es como cuando terminas de hacer cambios en tu proyecto y q
 | `git commit -m "Descripción de mis cambios"`     | Registro los cambios que hice con un mensaje descriptivo.                                             |
 | `git push origin nombre-de-mi-rama`              | Subo mi nueva rama y los cambios al repositorio remoto (GitHub, por ejemplo).                         |
 
+# Clase 5 
+##¿Que es GitFlow?
+Git Flow es una estrategia para organizar el trabajo en Git.
+Uso la rama "main" para el código en producción estable.
+La rama "develo"2 es donde integro lo que está en desarrollo.
+Cada nueva funcionalidad la hago en una rama "feature".
+Cuando ya casi termino, uso una rama "release" para pulir detalles.
+Si hay errores urgentes, los arreglo con una rama "hotfix".
+Todo sigue un flujo claro que evita el caos en el proyecto.
+Así trabajo en equipo sin pisarnos el código ni romper nada.
+<details><summary> Comandos de Git Flow 🚀 </summary>
+
+| **Comando**                             | **Descripción**                                                                                           |
+|----------------------------------------|-----------------------------------------------------------------------------------------------------------|
+| `git flow init`                        | **Función**: Inicializa Git Flow en tu repositorio, creando las ramas base como `main` y `develop`.       |
+| `git flow feature start nombre`        | **Función**: Crea una nueva rama `feature/nombre` desde `develop` para trabajar en una nueva funcionalidad.|
+| `git flow feature finish nombre`       | **Función**: Fusiona la rama `feature/nombre` a `develop` y la elimina cuando terminas la funcionalidad.  |
+| `git flow release start vX.X.X`        | **Función**: Crea una rama `release` desde `develop` para preparar una nueva versión.                     |
+| `git flow release finish vX.X.X`       | **Función**: Fusiona `release` en `main` y `develop`, y crea un tag con la versión.                       |
+| `git flow hotfix start nombre`         | **Función**: Crea una rama `hotfix` desde `main` para corregir errores urgentes en producción.            |
+| `git flow hotfix finish nombre`        | **Función**: Fusiona la `hotfix` en `main` y `develop`, y etiqueta una nueva versión si es necesario.     |
+| `git flow support start nombre`        | **Función**: (Opcional) Para mantener versiones antiguas que aún se deben actualizar o mantener.         |
+
+</details> 
+## ¿Que es Trunk Based Development?
+Trunk Based Development, que es trabajar todos sobre la misma rama principal, normalmente main.
+No me complico con muchas ramas; hago cambios pequeños y los subo seguido.
+Si una función no está lista, la dejo escondida con un feature toggle.
+Así el código siempre está limpio, actualizado y listo para producción.
+
+![image](https://github.com/user-attachments/assets/3836bc38-a0d2-4424-909e-1d5d869fb90c)
+
+| **Concepto** | **¿Qué significa?**                                                                 | **¿Cuándo lo uso?**                                                                                         |
+|--------------|---------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
+| `Ship`       | Hago el cambio directamente y lo subo sin pedir revisión.                            | Cuando el cambio es **muy pequeño o trivial**, y confío en que no rompe nada (ej. corrección de typo).     |
+| `Show`       | Hago el cambio y lo comparto, pero **no pido aprobación**, solo comentarios.         | Cuando quiero **feedback informal** sobre algo ya hecho (ej. rediseño, refactor que no afecta funcionalidad). |
+| `Ask`        | Hago el cambio y **pido revisión antes de subirlo** (Pull Request o Code Review).    | Cuando el cambio es **grande, complejo o sensible**, y necesito asegurarme de que está bien hecho.          |
+![image](https://github.com/user-attachments/assets/a6f8dda8-6ac0-4a2c-8f5d-a2ac1138a3e8)XD
+
+
+
+* **Ship**
+Contexto: Cambios triviales o seguros (ej. corregir un typo, actualizar comentarios).
+Subo directamente sin revisión, porque no hay riesgo.
+
+* **Show**
+Contexto: Cambios ya hechos que quiero compartir para recibir feedback informal.
+No necesito aprobación, pero sí me interesa lo que opinen los demás.
+
+* **Ask**
+Contexto: Cambios grandes, sensibles o que podrían romper algo.
+Pido revisión antes de fusionar, abro un Pull Request y espero aprobación.
+
+# Clase 6
+## Buenas practicas en git
+
+Las buenas prácticas en Git me ayudan a trabajar de forma ordenada y colaborativa.
+Evitan errores, confusiones y conflictos cuando varios trabajamos en el mismo proyecto.
+Uso commits claros para que el historial tenga sentido.
+Evito subir cosas innecesarias, como archivos temporales.
+Trabajo en ramas para no romper la versión principal.
+Uso nombres descriptivos en las ramas (ej. feature/login).
+No hago commits gigantes que mezclen muchas cosas.
+Reviso bien antes de hacer merge o pull.
+Hago pull seguido para no quedarme atrás del equipo.
+Uso .gitignore para excluir archivos que no deben subirse.
+Siempre pruebo antes de subir un cambio.
+Escribo mensajes de commit que expliquen el "qué" y el "por qué".
+Uso stash si tengo cambios a medio hacer pero necesito cambiar de rama.
+Y antes de un push, me aseguro de que todo esté bien probado y limpio.
+![image](https://github.com/user-attachments/assets/08469091-76ed-41ff-beb1-ad336b709982)
+
+
+##¿Cada cuanto deveria hacer un commit?
+a menudo es mejor tener commits pequeños commits para saber que hace un commit.
+![image](https://github.com/user-attachments/assets/3420cec1-7548-43f0-8831-e6e5bc401ddf)
+hacer un commit a menudo no significa hacerlos sin sentido
+## ¿Como hacer un buen commit?
+Un buen commit debe usar el modo imperativo y ser claro.
+El mensaje corto debe ser directo, sin pasar de 50 caracteres.
+Si es necesario, agrega un cuerpo más largo explicando qué y por qué.
+El título y cuerpo deben estar separados por una línea en blanco.
+No uses mensajes vagos como “cambios” o “actualización”.
+Evita usar tiempo pasado, como "Agregué" o "Hice".
+Sé coherente en el estilo y los detalles para que todos entiendan el historial.
+Un buen commit facilita el trabajo en equipo y la depuración.
+
+## ¿como hacer una buena rama?
+
+Una buena rama tiene un nombre claro y descriptivo.
+Usa prefijos como feature/, bugfix/ o hotfix/ para especificar el tipo de tarea.
+El nombre debe ser corto, pero lo suficientemente detallado para entender el propósito.
+Evita nombres genéricos como test o dev.
+Usa guiones (-) para separar las palabras en lugar de guiones bajos (_).
+El nombre debe reflejar el propósito del trabajo en esa rama.
+Es recomendable incluir el número de la tarea o el bug si usas un sistema de seguimiento.
+Siempre parte de la rama principal (main o develop) para evitar conflictos.
+# Clase 7
+## En que casos desasemos cambios?
+*  Cuando cometiste un error en el código.
+Si cometiste un error y ya hiciste un commit, puedes deshacerlo sin afectar el historial del repositorio.
+
+*  Cuando agregaste archivos innecesarios al repositorio.
+Si accidentalmente agregaste archivos que no deberían estar en el repo (como archivos de configuración locales), puedes eliminarlos fácilmente.
+
+*  Cuando hiciste cambios sin querer y no has hecho un commit.
+Si ya modificaste archivos pero no has realizado un commit, puedes simplemente revertir los cambios locales.
+
+* Cuando intentas hacer un merge que resulta en conflictos que no puedes resolver.
+Si un merge genera demasiados conflictos y prefieres cancelar todo el proceso, puedes deshacerlo.
+
+
+| **Comando**                                      | **Descripción**                                                                                                      |
+|--------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
+| `git checkout -- archivo.txt`                    | **Función**: Deshace cambios no guardados en el archivo especificado, restaurando el archivo al estado del último commit.|
+| `git reset --soft HEAD~1`                        | **Función**: Deshace el último commit pero **mantiene los cambios** en tu área de trabajo para poder editarlos.       |
+| `git reset --hard HEAD~1`                        | **Función**: Deshace el último commit y **descarta todos los cambios** en los archivos, restaurando todo al último commit.|
+| `git rm --cached archivo.txt`                    | **Función**: Elimina el archivo del seguimiento de Git (pero lo deja en tu sistema de archivos). Es útil para eliminar archivos innecesarios.|
+| `git commit -m "Elimina archivo innecesario"`    | **Función**: Después de usar `git rm --cached`, este commit elimina el archivo de Git, pero lo mantiene localmente.    |
+
+## Comando destructivos y no destructivos
+
+| **Tipo**               | **Comando**                                      | **Descripción**                                                                                                      |
+|------------------------|--------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
+| **No Destructivo**      | `git status`                                    | **Función**: Muestra los cambios actuales en tu área de trabajo, sin modificar nada.                                 |
+| **No Destructivo**      | `git diff`                                      | **Función**: Muestra las diferencias entre el estado actual de los archivos y el último commit, sin afectar nada.     |
+| **No Destructivo**      | `git commit`                                    | **Función**: Realiza un commit de los cambios, guardándolos en el historial. No afecta el historial previo.          |
+| **Destructivo**         | `git reset --hard`                              | **Función**: Deshace los commits, y **elimina los cambios locales** sin posibilidad de recuperación.                  |
+| **Destructivo**         | `git clean -f`                                  | **Función**: Elimina archivos no rastreados en el directorio de trabajo, como archivos temporales o generados.        |
+| **Destructivo**         | `git push --force`                              | **Función**: Sobrescribe la historia del repositorio remoto, eliminando o modificando commits previos (peligroso).    |
+
+![Explosión de Calamardo](https://i.makeagif.com/media/10-02-2015/nftfX2.gif)
+## ¿Qué hace git revert?
+No elimina el commit original, sino que crea un nuevo commit que revierte los cambios del commit especificado.
+
+Se usa cuando deseas deshacer los efectos de un commit pero sin perder el historial de ese cambio.
+
+¿Cuándo usarlo?
+Cuando ya has compartido el commit con otras personas (por ejemplo, en un repositorio remoto) y no quieres reescribir el historial.
+## ¿Qué hace git checkout?
+Cambiar de rama:
+Cuando usas git checkout con el nombre de una rama, cambias a esa rama en tu repositorio local.
+                                    | **Descripción**                                                                                                         |
+|----------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
+| `git checkout <nombre-de-la-rama>`                 | **Función**: Cambia a la rama especificada.                                                                                 |
+| `git checkout -b <nombre-de-la-nueva-rama>`        | **Función**: Crea una nueva rama y cambia a ella.                                                                          |
+| `git checkout -- <archivo>`                        | **Función**: Restaura un archivo a su estado en el último commit, deshaciendo cambios no comprometidos.                   |
+| `git checkout <rama> -- <archivo>`                 | **Función**: Restaura un archivo desde otra rama sin cambiar de rama completamente.                                        |
+| `git checkout <hash-del-commit> -- <archivo>`      | **Función**: Restaura un archivo desde un commit específico, permitiendo deshacer cambios a un punto anterior.            |
+| `git checkout main`                                | **Función**: Cambia a la rama principal (típicamente `main` o `master`).                                                 |
 
