@@ -90,5 +90,39 @@ Es una versión separada del repositorio principalal ser una linea de desarollo 
 
 
 
-⚠️ para crear una rama minimo tiene sque tener un commit en el repositorio
+⚠️ para crear una rama minimo tiene que tener un commit en el repositorio
+
+# clase 3
+## Fusionar ramas
+Cuando hablamos de fusión nos referimos a que los cambios que hemos realizado en la rama se integra otra rama
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/d2c96de5-0adf-4e80-8ca2-f4dd279c8c94" alt="image" />
+</p>
+
+
+
+
+* **git brach --delete<nombredelarama>**
+* **git branch -d<nombredelarama>**
+## ¿Por que eliminar ramas?
+Se la elimina cuando ya no las necesita, como después de fusionarlas 
+Así evito confusiones, mantengo el repositorio limpio y organizado.
+Además, ayuda a que otros no trabajen por error en ramas viejas o innecesarias se la elimina con
+* **git branch --delete <elnombredelarama>**
+## conflictos en Git
+**1**
+borrar un archivo por accidente
+* **solucion**
+  git restore archivo
+  git log
+
+**2**
+  conflictos con el merge
+  * **solucion**
+    git add archivo
+    git commit
+
+    **esas fueron las que me sucedieron a mi XD**
+
 
