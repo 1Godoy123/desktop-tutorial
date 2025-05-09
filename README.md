@@ -328,7 +328,11 @@ Y antes de un push, me aseguro de que todo esté bien probado y limpio.
 
 ##¿Cada cuanto deveria hacer un commit?
 a menudo es mejor tener commits pequeños commits para saber que hace un commit.
+
+
 ![image](https://github.com/user-attachments/assets/3420cec1-7548-43f0-8831-e6e5bc401ddf)
+
+
 hacer un commit a menudo no significa hacerlos sin sentido
 ## ¿Como hacer un buen commit?
 Un buen commit debe usar el modo imperativo y ser claro.
