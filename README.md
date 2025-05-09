@@ -14,7 +14,13 @@ es un sistema que registra todos los cambios en el codigo fuente de un proyecto
 *  **rendimiento⚡** guarda lo que es importante
 *  **seguridad🔒** conserva lo que le pidas
 *  **flexibilidad🔁** no es nesesario un desarrollo
-    ![image](https://github.com/user-attachments/assets/3ad0239d-def8-4ee1-8472-fadc65e961f7)>
+
+
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/3ad0239d-def8-4ee1-8472-fadc65e961f7" alt="image" />
+</p>
+   
   
 ## ¿Que es git?  
 
@@ -290,7 +296,13 @@ Así el código siempre está limpio, actualizado y listo para producción.
 | `Ship`       | Hago el cambio directamente y lo subo sin pedir revisión.                            | Cuando el cambio es **muy pequeño o trivial**, y confío en que no rompe nada (ej. corrección de typo).     |
 | `Show`       | Hago el cambio y lo comparto, pero **no pido aprobación**, solo comentarios.         | Cuando quiero **feedback informal** sobre algo ya hecho (ej. rediseño, refactor que no afecta funcionalidad). |
 | `Ask`        | Hago el cambio y **pido revisión antes de subirlo** (Pull Request o Code Review).    | Cuando el cambio es **grande, complejo o sensible**, y necesito asegurarme de que está bien hecho.          |
-![image](https://github.com/user-attachments/assets/a6f8dda8-6ac0-4a2c-8f5d-a2ac1138a3e8)XD
+
+
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/a6f8dda8-6ac0-4a2c-8f5d-a2ac1138a3e8" alt="image" />
+</p>
+
 
 
 
@@ -329,8 +341,9 @@ Y antes de un push, me aseguro de que todo esté bien probado y limpio.
 ##¿Cada cuanto deveria hacer un commit?
 a menudo es mejor tener commits pequeños commits para saber que hace un commit.
 
-
-![image](https://github.com/user-attachments/assets/3420cec1-7548-43f0-8831-e6e5bc401ddf)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/3420cec1-7548-43f0-8831-e6e5bc401ddf" alt="image" />
+</p>
 
 
 hacer un commit a menudo no significa hacerlos sin sentido
@@ -389,7 +402,14 @@ Si un merge genera demasiados conflictos y prefieres cancelar todo el proceso, p
 | **Destructivo**         | `git clean -f`                                  | **Función**: Elimina archivos no rastreados en el directorio de trabajo, como archivos temporales o generados.        |
 | **Destructivo**         | `git push --force`                              | **Función**: Sobrescribe la historia del repositorio remoto, eliminando o modificando commits previos (peligroso).    |
 
-![Explosión de Calamardo](https://i.makeagif.com/media/10-02-2015/nftfX2.gif)
+
+
+<p align="center">
+  <img src="https://i.makeagif.com/media/10-02-2015/nftfX2.gif" alt="Explosión de Calamardo">
+</p>
+
+
+
 ## ¿Qué hace git revert?
 No elimina el commit original, sino que crea un nuevo commit que revierte los cambios del commit especificado.
 
