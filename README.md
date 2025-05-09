@@ -125,4 +125,131 @@ borrar un archivo por accidente
 
     **esas fueron las que me sucedieron a mi XD**
 
+# Clase 4
+## Empezamos con GitHub <img src="https://github.com/user-attachments/assets/ecd23cd3-f833-4736-bc56-2bd3d3a7c5d1" alt="GitHub logo" width="80" style="vertical-align: middle;">
+
+GitHub es como una red social para proyectos de programación. Me permite guardar mi código en la nube, trabajar en equipo, y llevar el control de todos los cambios que hago con Git. Básicamente, uso Git en mi compu para manejar versiones del código, y luego uso GitHub para subir todo eso a internet y colaborar con otros. 
+
+## ¿Git y GitHub son los mismos?
+
+![image](https://github.com/user-attachments/assets/267ec2a2-0397-4f57-aaf0-f2f5115ab2a9)
+
+
+
+Git y GitHub no son lo mismo, aunque se usan juntos casi siempre.
+Git es una herramienta que tengo instalada en mi compu y me sirve para guardar los cambios que voy haciendo en mi código, llevar un control de versiones, y no perder nada si rompo algo. Todo eso lo hago de forma local, sin necesidad de internet.
+
+En cambio, GitHub es una página web donde puedo subir esos proyectos que manejo con Git, para tenerlos en la nube, compartirlos con otros y trabajar en equipo. Es como el “Google Drive” de los proyectos de código, pero mucho más pro porque tiene herramientas para colaborar, revisar cambios, automatizar tareas, y más.
+
+En resumen: Git es la herramienta, y GitHub es el lugar donde subo lo que hago con esa herramienta.
+
+## ¿GitHub es único?
+no es el  unico pero si es el mas popular pero esxisteno otras como
+
+| 🚀 Plataforma     | 🔎 ¿Qué ofrece?                                                                 |
+|------------------|----------------------------------------------------------------------------------|
+| **GitHub**        | La más conocida, con muchas herramientas para colaboración y automatización.   |
+| **GitLab**        | Muy completo, permite tener repos privados gratis y tiene CI/CD integrado.     |
+| **Bitbucket**     | Integrado con Atlassian (como Jira), muy usado en entornos empresariales.      |
+| **SourceForge**   | Más antigua, orientada a proyectos de código abierto (open source).            |
+| **Azure DevOps**  | De Microsoft, muy útil para gestionar código, tareas y despliegues.            |
+
+
+## Como se usa un repositorio remoto (elemplo en GitHub)
+* **¿Como se usa GitHub?**
+**1.-**   Primero tenemos que crear un repositorio en GitHub
+**2.-**   Luego abro una terminal ("en bash git") y se escrive
+como se ve en la imagen esos son los codigos que se usan
+  ![image](https://github.com/user-attachments/assets/2ffd3cb9-8e6c-4f08-bd00-26f8a4b215d2)
+  ![image](https://github.com/user-attachments/assets/4dcaa351-4a32-4a47-9342-20b38d4acfd4)
+y tu git se veria haci y tendria los datos que tenias en tu codigo --En mi caso seria en pruebas--
+![image](https://github.com/user-attachments/assets/a88a1af4-4312-40d6-a8ea-67f2f6fb925a)
+
+## Para que sirve cada uno de los comandos
+<details><summary>ABREME!!!!! para mas info 😎😎</summary>
+
+### Comandos
+
+| **Comando**                                                                   | **Descripción**                                                                                                                |
+|-------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
+| `git init`                                                                     | Inicializa un repositorio Git en la carpeta local, preparándolo para empezar a realizar seguimientos de cambios.               |
+| `git add .`                                                                    | Agrega **todos los archivos** modificados al área de preparación (staging area) para ser incluidos en el próximo commit.        |
+| `git commit -m "primer commit"`                                                | Crea un commit con un mensaje descriptivo que guarda el estado actual del repositorio.                                         |
+| `git remote add origin https://github.com/1Godoy123/scesi.git`                 | Conecta tu repositorio local con el repositorio remoto de GitHub, permitiendo sincronización de archivos entre ambos.           |
+| `git push -u origin main`                                                      | Empuja los cambios locales de la rama `main` hacia el repositorio remoto en GitHub. El `-u` establece la relación para futuros `push`. |
+
+</details>
+
+* **Podemos veer informacion de otras personas pero como es algo izi y no quiero llena mucho espacio enbano entonces no lo mostrare solo mostrare como se ve  el perfil de una persona XD
+
+
+
+## ![image](https://github.com/user-attachments/assets/f457d08e-cc91-4ec2-ad3b-8642912f024b)
+
+## como clonar un repositorio
+|comando    | descripcion|
+|------------------|--------------|
+|git clone "https://github.com/usuario/repositorio.git"   |     Clona un repositorio remoto de GitHub en tu máquina local. Solo necesitas reemplazar la URL con la del repositorio que deseas clonar.|
+|cd repositorio          |   Entra en la carpeta del repositorio recién clonado, para empezar a trabajar en él.|
+
+## Como escrivir en un repositorio remoto 
+para hacer esto tienes que tener actualizado el bash
+* **git add .**
+Después de hacer los cambios, agrega los archivos modificados al área de preparación (staging area).
+
+* **git commit -m "Descripción de los cambios"**
+Realiza un commit con un mensaje que explique los cambios que hiciste.
+
+* **git push origin main**
+Finalmente, sube los cambios al repositorio remoto en la rama main. Si estás trabajando con otra rama, reemplaza main con el nombre de tu rama.
+
+## Como crear una rama remota
+
+* **git checkout -b nombre-de-tu-rama**
+Esto crea una nueva rama y te cambia automáticamente a ella. Reemplaza nombre-de-tu-rama por el nombre que desees para la nueva rama.
+
+Luego, subes esa rama al repositorio remoto con:
+
+* **git push origin nombre-de-tu-rama**
+Esto sube la nueva rama a GitHub o a tu repositorio remoto! 😲✨.
+
+| **git**       | **Para qué sirve**                                                                                                                                                                           |
+|---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **git pull**  | **Función**: Descargar los cambios del repositorio remoto y actualizar tu repositorio local con esos cambios. <br> **Dirección de los cambios**: Va de remoto a local. <br> **Cuándo usarlo**: Lo usas cuando quieres obtener los cambios que otras personas han subido al repositorio remoto (por ejemplo, en GitHub) para tener la versión más reciente del proyecto en tu máquina local. <br> **Ejemplo**: Si otros colaboradores han hecho cambios en la rama `main` en GitHub y quieres obtener esos cambios en tu repositorio local, usas `git pull`. |
+| **git push**  | **Función**: Subir los cambios de tu repositorio local al repositorio remoto. <br> **Dirección de los cambios**: Va de local a remoto. <br> **Cuándo usarlo**: Lo usas cuando has hecho cambios en tu repositorio local (como agregar archivos, modificar código) y quieres compartir esos cambios con otras personas o guardarlos en el repositorio remoto (como GitHub). <br> **Ejemplo**: Después de hacer un commit con tus cambios, usas `git push` para subir esos cambios al repositorio remoto. |
+
+<details><summary> Comandos de git pull❓❓❓ </summary>
+
+| **Comando**                                       | **Descripción**                                                                                                                           |
+|---------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| `git pull origin main`                            | **Función**: Descarga los cambios de la rama `main` del repositorio remoto (por ejemplo, en GitHub) y los fusiona con tu rama local.       |
+| `git pull origin nombre-de-la-rama`               | **Función**: Trae los cambios de la rama remota `nombre-de-la-rama` y los fusiona con tu rama local.                                        |
+| `git pull nombre-del-remoto nombre-de-la-rama`    | **Función**: Si tienes más de un repositorio remoto configurado, especifica desde qué remoto deseas hacer el pull.                        |
+| `git pull --no-commit origin main`                | **Función**: Trae los cambios de la rama `main`, pero **no hace el commit automáticamente**. Puedes revisar antes de confirmar el merge. |
+| `git pull --rebase origin main`                   | **Función**: Aplica tus cambios encima de los cambios del remoto en lugar de hacer un merge, manteniendo un historial más limpio.          |
+</details>
+
+<details><summary> Comandos de git push❓❓❓ </summary>
+
+| **Comando**                                       | **Descripción**                                                                                                                           |
+|---------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| `git push origin main`                            | **Función**: Sube los cambios locales de la rama `main` al repositorio remoto (por ejemplo, en GitHub).                                     |
+| `git push origin nombre-de-la-rama`               | **Función**: Sube los cambios locales de la rama `nombre-de-la-rama` al repositorio remoto.                                                |
+| `git push --set-upstream origin nombre-de-la-rama`| **Función**: Establece la rama remota como el origen para la rama local, útil cuando creas una nueva rama local y la subes por primera vez. |
+| `git push origin --delete nombre-de-la-rama`      | **Función**: Elimina la rama `nombre-de-la-rama` del repositorio remoto.                                                                  |
+| `git push -u origin main`                         | **Función**: Sube los cambios de la rama `main` y establece una relación de seguimiento con la rama remota, facilitando futuros `push`.    |
+</details>
+
+## Que es un PR
+Un Pull Request (PR) es como cuando terminas de hacer cambios en tu proyecto y quieres que otras personas los vean antes de agregarlo a la versión principal. Así que, cuando trabajo en una rama diferente (digamos que en una nueva idea o característica) y quiero que esos cambios lleguen a la rama principa
+
+| **Comando**                                      | **¿Para qué sirve?**                                                                                   |
+|--------------------------------------------------|--------------------------------------------------------------------------------------------------------|
+| `git checkout main`                              | Me aseguro de estar en la rama principal antes de crear una nueva rama.                               |
+| `git pull origin main`                           | Actualizo mi rama principal local con los últimos cambios del repositorio remoto.                     |
+| `git checkout -b nombre-de-mi-rama`              | Creo una nueva rama a partir de `main` para trabajar mis cambios.                                     |
+| *(Aquí edito archivos normalmente)*              | Hago los cambios que quiero en el proyecto.                                                           |
+| `git add .`                                      | Agrego todos los archivos modificados al área de preparación para el commit.                          |
+| `git commit -m "Descripción de mis cambios"`     | Registro los cambios que hice con un mensaje descriptivo.                                             |
+| `git push origin nombre-de-mi-rama`              | Subo mi nueva rama y los cambios al repositorio remoto (GitHub, por ejemplo).                         |
 
