@@ -306,4 +306,47 @@ No necesito aprobación, pero sí me interesa lo que opinen los demás.
 Contexto: Cambios grandes, sensibles o que podrían romper algo.
 Pido revisión antes de fusionar, abro un Pull Request y espero aprobación.
 
+# Clase 6
+## Buenas practicas en git
 
+Las buenas prácticas en Git me ayudan a trabajar de forma ordenada y colaborativa.
+Evitan errores, confusiones y conflictos cuando varios trabajamos en el mismo proyecto.
+Uso commits claros para que el historial tenga sentido.
+Evito subir cosas innecesarias, como archivos temporales.
+Trabajo en ramas para no romper la versión principal.
+Uso nombres descriptivos en las ramas (ej. feature/login).
+No hago commits gigantes que mezclen muchas cosas.
+Reviso bien antes de hacer merge o pull.
+Hago pull seguido para no quedarme atrás del equipo.
+Uso .gitignore para excluir archivos que no deben subirse.
+Siempre pruebo antes de subir un cambio.
+Escribo mensajes de commit que expliquen el "qué" y el "por qué".
+Uso stash si tengo cambios a medio hacer pero necesito cambiar de rama.
+Y antes de un push, me aseguro de que todo esté bien probado y limpio.
+![image](https://github.com/user-attachments/assets/08469091-76ed-41ff-beb1-ad336b709982)
+
+
+##¿Cada cuanto deveria hacer un commit?
+a menudo es mejor tener commits pequeños commits para saber que hace un commit.
+![image](https://github.com/user-attachments/assets/3420cec1-7548-43f0-8831-e6e5bc401ddf)
+hacer un commit a menudo no significa hacerlos sin sentido
+## ¿Como hacer un buen commit?
+Un buen commit debe usar el modo imperativo y ser claro.
+El mensaje corto debe ser directo, sin pasar de 50 caracteres.
+Si es necesario, agrega un cuerpo más largo explicando qué y por qué.
+El título y cuerpo deben estar separados por una línea en blanco.
+No uses mensajes vagos como “cambios” o “actualización”.
+Evita usar tiempo pasado, como "Agregué" o "Hice".
+Sé coherente en el estilo y los detalles para que todos entiendan el historial.
+Un buen commit facilita el trabajo en equipo y la depuración.
+
+## ¿como hacer una buena rama?
+
+Una buena rama tiene un nombre claro y descriptivo.
+Usa prefijos como feature/, bugfix/ o hotfix/ para especificar el tipo de tarea.
+El nombre debe ser corto, pero lo suficientemente detallado para entender el propósito.
+Evita nombres genéricos como test o dev.
+Usa guiones (-) para separar las palabras en lugar de guiones bajos (_).
+El nombre debe reflejar el propósito del trabajo en esa rama.
+Es recomendable incluir el número de la tarea o el bug si usas un sistema de seguimiento.
+Siempre parte de la rama principal (main o develop) para evitar conflictos.
