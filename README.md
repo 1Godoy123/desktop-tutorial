@@ -253,3 +253,57 @@ Un Pull Request (PR) es como cuando terminas de hacer cambios en tu proyecto y q
 | `git commit -m "Descripción de mis cambios"`     | Registro los cambios que hice con un mensaje descriptivo.                                             |
 | `git push origin nombre-de-mi-rama`              | Subo mi nueva rama y los cambios al repositorio remoto (GitHub, por ejemplo).                         |
 
+# Clase 5 
+##¿Que es GitFlow?
+Git Flow es una estrategia para organizar el trabajo en Git.
+Uso la rama "main" para el código en producción estable.
+La rama "develo"2 es donde integro lo que está en desarrollo.
+Cada nueva funcionalidad la hago en una rama "feature".
+Cuando ya casi termino, uso una rama "release" para pulir detalles.
+Si hay errores urgentes, los arreglo con una rama "hotfix".
+Todo sigue un flujo claro que evita el caos en el proyecto.
+Así trabajo en equipo sin pisarnos el código ni romper nada.
+<details><summary> Comandos de Git Flow 🚀 </summary>
+
+| **Comando**                             | **Descripción**                                                                                           |
+|----------------------------------------|-----------------------------------------------------------------------------------------------------------|
+| `git flow init`                        | **Función**: Inicializa Git Flow en tu repositorio, creando las ramas base como `main` y `develop`.       |
+| `git flow feature start nombre`        | **Función**: Crea una nueva rama `feature/nombre` desde `develop` para trabajar en una nueva funcionalidad.|
+| `git flow feature finish nombre`       | **Función**: Fusiona la rama `feature/nombre` a `develop` y la elimina cuando terminas la funcionalidad.  |
+| `git flow release start vX.X.X`        | **Función**: Crea una rama `release` desde `develop` para preparar una nueva versión.                     |
+| `git flow release finish vX.X.X`       | **Función**: Fusiona `release` en `main` y `develop`, y crea un tag con la versión.                       |
+| `git flow hotfix start nombre`         | **Función**: Crea una rama `hotfix` desde `main` para corregir errores urgentes en producción.            |
+| `git flow hotfix finish nombre`        | **Función**: Fusiona la `hotfix` en `main` y `develop`, y etiqueta una nueva versión si es necesario.     |
+| `git flow support start nombre`        | **Función**: (Opcional) Para mantener versiones antiguas que aún se deben actualizar o mantener.         |
+
+</details> 
+## ¿Que es Trunk Based Development?
+Trunk Based Development, que es trabajar todos sobre la misma rama principal, normalmente main.
+No me complico con muchas ramas; hago cambios pequeños y los subo seguido.
+Si una función no está lista, la dejo escondida con un feature toggle.
+Así el código siempre está limpio, actualizado y listo para producción.
+
+![image](https://github.com/user-attachments/assets/3836bc38-a0d2-4424-909e-1d5d869fb90c)
+
+| **Concepto** | **¿Qué significa?**                                                                 | **¿Cuándo lo uso?**                                                                                         |
+|--------------|---------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
+| `Ship`       | Hago el cambio directamente y lo subo sin pedir revisión.                            | Cuando el cambio es **muy pequeño o trivial**, y confío en que no rompe nada (ej. corrección de typo).     |
+| `Show`       | Hago el cambio y lo comparto, pero **no pido aprobación**, solo comentarios.         | Cuando quiero **feedback informal** sobre algo ya hecho (ej. rediseño, refactor que no afecta funcionalidad). |
+| `Ask`        | Hago el cambio y **pido revisión antes de subirlo** (Pull Request o Code Review).    | Cuando el cambio es **grande, complejo o sensible**, y necesito asegurarme de que está bien hecho.          |
+![image](https://github.com/user-attachments/assets/a6f8dda8-6ac0-4a2c-8f5d-a2ac1138a3e8)XD
+
+
+
+* **Ship**
+Contexto: Cambios triviales o seguros (ej. corregir un typo, actualizar comentarios).
+Subo directamente sin revisión, porque no hay riesgo.
+
+* **Show**
+Contexto: Cambios ya hechos que quiero compartir para recibir feedback informal.
+No necesito aprobación, pero sí me interesa lo que opinen los demás.
+
+* **Ask**
+Contexto: Cambios grandes, sensibles o que podrían romper algo.
+Pido revisión antes de fusionar, abro un Pull Request y espero aprobación.
+
+
