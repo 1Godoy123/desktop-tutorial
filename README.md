@@ -407,4 +407,58 @@ Cuando usas git checkout con el nombre de una rama, cambias a esa rama en tu rep
 | `git checkout <hash-del-commit> -- <archivo>`      | **Función**: Restaura un archivo desde un commit específico, permitiendo deshacer cambios a un punto anterior.            |
 | `git checkout main`                                | **Función**: Cambia a la rama principal (típicamente `main` o `master`).                                                 |
 
+# Clase 8
+## ¿Que es hook?
+Un hook en Git es un script que se ejecuta automáticamente cuando ocurre un evento específico dentro del ciclo de vida de Git (como un commit, push, merge, etc.).
 
+|**Códigos**            |**Función / Descripción**                                                                 |
+|-----------------------|------------------------------------------------------------------------------------------|
+|`pre-commit`           |**Función**: Se ejecuta antes de hacer `git commit`. Ideal para correr tests o linters.  |
+|`commit-msg`           |**Función**: Después de escribir el mensaje del commit. Verifica convención como `feat:`.|
+|`pre-push`             |**Función**: Antes de hacer `git push`. Revisa tests o errores antes de subir cambios.   |
+|`post-merge`           |**Función**: Después de un `git merge`. Útil para actualizar dependencias o reiniciar.   |
+|`pre-rebase`           |**Función**: Antes de ejecutar `git rebase`. Valida el estado limpio del repositorio.    |
+
+🧠 ¿Qué son los alias en Git?
+Los alias en Git son como atajos personalizados que te permiten ejecutar comandos largos o complejos con nombres más cortos o intuitivos.
+
+
+<details><summary> comandos de alias </summary>
+
+|**Alias / Comando**                      |**Función / Descripción**                                                                 |
+|-----------------------------------------|------------------------------------------------------------------------------------------|
+|`git st`                                 |**Alias** de `git status`. Muestra el estado del repositorio.                           |
+|`git co <rama>`                          |**Alias** de `git checkout <rama>`. Cambia de rama fácilmente.                          |
+|`git br`                                 |**Alias** de `git branch`. Lista todas las ramas.                                       |
+|`git hist`                               |Muestra el historial con grafo y commits resumidos.                                     |
+|`git ci -m "mensaje"`                    |**Alias** de `git commit -m`. Hace commits rápidos.                                     |
+|`git last`                               |Muestra el último commit hecho.                                                         |
+|`git type`                               |Muestra el tipo de cada archivo con `ls-tree`. Útil para revisar estructura.            |
+|`git unstage <archivo>`                 |Deshace un `git add`, dejando el archivo sin preparar.                                  |
+|`git amend`                              |Edita el último commit sin cambiar el historial (si no ha sido pusheado).               |
+|`git lg`                                 |Muestra un log visual completo (similar a `hist`). Ideal para ver ramas y merges.       |
+|`git cleanup`                            |Alias personalizado para eliminar ramas locales ya fusionadas.                         |
+</details>
+
+
+
+<details><summary> Comandos de para acortar codigos </summary>
+
+|**Truco / Comando**                                       |**Función / Descripción**                                                                 |
+|-----------------------------------------------------------|------------------------------------------------------------------------------------------|
+|`git log -S"texto"`                                       |🔍 Busca commits que hayan agregado o eliminado cierto texto.                            |
+|`git diff main..HEAD`                                     |📌 Muestra diferencias entre tu rama actual y `main`.                                    |
+|`git checkout HEAD -- archivo.txt`                        |♻️ Restaura un archivo al estado del último commit.                                      |
+|`git branch --merged \| grep -v "\*" \| xargs git branch -d`|🧹 Elimina ramas locales ya fusionadas.                                                   |
+|`git log -n 5 --name-only --pretty=format:`               |📂 Muestra archivos modificados en los últimos 5 commits.                                |
+|`git reflog`                                              |📜 Muestra todos los movimientos de HEAD, útil para recuperar commits perdidos.          |
+|`git stash`                                               |👜 Guarda temporalmente los cambios no guardados para cambiar de rama sin perderlos.     |
+|`git stash pop`                                           |📤 Restaura los cambios guardados con `stash`.                                           |
+|`git cherry -v main`                                      |🍒 Muestra commits únicos en tu rama que no están en `main`.                            |
+|`git shortlog -sn`                                        |👥 Muestra los autores y cuántos commits ha hecho cada uno.                             |
+</details>
+ 
+## Notaaaaaaa 
+Con esto acabo mi proyecto en github con ganas de querer aprobar pero veremos que pasa con el tiempo gracias por ver y adios..
+
+# 9/mayo/2025
