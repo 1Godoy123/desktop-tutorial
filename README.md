@@ -350,3 +350,61 @@ Usa guiones (-) para separar las palabras en lugar de guiones bajos (_).
 El nombre debe reflejar el propósito del trabajo en esa rama.
 Es recomendable incluir el número de la tarea o el bug si usas un sistema de seguimiento.
 Siempre parte de la rama principal (main o develop) para evitar conflictos.
+
+# Clase 7
+## En que casos desasemos cambios?
+*  Cuando cometiste un error en el código.
+Si cometiste un error y ya hiciste un commit, puedes deshacerlo sin afectar el historial del repositorio.
+
+*  Cuando agregaste archivos innecesarios al repositorio.
+Si accidentalmente agregaste archivos que no deberían estar en el repo (como archivos de configuración locales), puedes eliminarlos fácilmente.
+
+*  Cuando hiciste cambios sin querer y no has hecho un commit.
+Si ya modificaste archivos pero no has realizado un commit, puedes simplemente revertir los cambios locales.
+
+* Cuando intentas hacer un merge que resulta en conflictos que no puedes resolver.
+Si un merge genera demasiados conflictos y prefieres cancelar todo el proceso, puedes deshacerlo.
+
+
+| **Comando**                                      | **Descripción**                                                                                                      |
+|--------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
+| `git checkout -- archivo.txt`                    | **Función**: Deshace cambios no guardados en el archivo especificado, restaurando el archivo al estado del último commit.|
+| `git reset --soft HEAD~1`                        | **Función**: Deshace el último commit pero **mantiene los cambios** en tu área de trabajo para poder editarlos.       |
+| `git reset --hard HEAD~1`                        | **Función**: Deshace el último commit y **descarta todos los cambios** en los archivos, restaurando todo al último commit.|
+| `git rm --cached archivo.txt`                    | **Función**: Elimina el archivo del seguimiento de Git (pero lo deja en tu sistema de archivos). Es útil para eliminar archivos innecesarios.|
+| `git commit -m "Elimina archivo innecesario"`    | **Función**: Después de usar `git rm --cached`, este commit elimina el archivo de Git, pero lo mantiene localmente.    |
+
+## Comando destructivos y no destructivos
+
+| **Tipo**               | **Comando**                                      | **Descripción**                                                                                                      |
+|------------------------|--------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
+| **No Destructivo**      | `git status`                                    | **Función**: Muestra los cambios actuales en tu área de trabajo, sin modificar nada.                                 |
+| **No Destructivo**      | `git diff`                                      | **Función**: Muestra las diferencias entre el estado actual de los archivos y el último commit, sin afectar nada.     |
+| **No Destructivo**      | `git commit`                                    | **Función**: Realiza un commit de los cambios, guardándolos en el historial. No afecta el historial previo.          |
+| **Destructivo**         | `git reset --hard`                              | **Función**: Deshace los commits, y **elimina los cambios locales** sin posibilidad de recuperación.                  |
+| **Destructivo**         | `git clean -f`                                  | **Función**: Elimina archivos no rastreados en el directorio de trabajo, como archivos temporales o generados.        |
+| **Destructivo**         | `git push --force`                              | **Función**: Sobrescribe la historia del repositorio remoto, eliminando o modificando commits previos (peligroso).    |
+
+![Explosión de Calamardo](https://i.makeagif.com/media/10-02-2015/nftfX2.gif)
+## ¿Qué hace git revert?
+No elimina el commit original, sino que crea un nuevo commit que revierte los cambios del commit especificado.
+
+Se usa cuando deseas deshacer los efectos de un commit pero sin perder el historial de ese cambio.
+
+¿Cuándo usarlo?
+Cuando ya has compartido el commit con otras personas (por ejemplo, en un repositorio remoto) y no quieres reescribir el historial.
+## ¿Qué hace git checkout?
+Cambiar de rama:
+Cuando usas git checkout con el nombre de una rama, cambias a esa rama en tu repositorio local.
+
+## codigos
+|**codigos**                                         |  **Descripción**                                                                                    |
+|----------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+| `git checkout <nombre-de-la-rama>`                 | **Función**: Cambia a la rama especificada.                                                                                 |
+| `git checkout -b <nombre-de-la-nueva-rama>`        | **Función**: Crea una nueva rama y cambia a ella.                                                                          |
+| `git checkout -- <archivo>`                        | **Función**: Restaura un archivo a su estado en el último commit, deshaciendo cambios no comprometidos.                   |
+| `git checkout <rama> -- <archivo>`                 | **Función**: Restaura un archivo desde otra rama sin cambiar de rama completamente.                                        |
+| `git checkout <hash-del-commit> -- <archivo>`      | **Función**: Restaura un archivo desde un commit específico, permitiendo deshacer cambios a un punto anterior.            |
+| `git checkout main`                                | **Función**: Cambia a la rama principal (típicamente `main` o `master`).                                                 |
+
+
